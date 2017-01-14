@@ -8,10 +8,17 @@ export default Ember.Controller.extend({
 
   property: true,
   actions: {
-    sortBy: function(){
-      if(this.property){
-        console.log('hello');
-      }
-    }
+    sortByName: function(){
+      this.set('sortProperties', ['name:dec']);
+    },
+    sortByPaymentType: function(){
+      this.set('sortProperties', ['paymentType:asc']);
+    },
+    sortByPaymentStatus: function(){
+      this.set('sortProperties', ['paymentStatus:asc']);
+    },
+    sortBysortByAttendance: function(){
+      this.set('sortProperties', ['attendanceStatus:asc']);
+    },
   }
 });

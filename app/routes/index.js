@@ -30,8 +30,20 @@ export default Ember.Route.extend({
       guest.save();
       this.transitionTo('index');
     },
-    sortBy: function() {
-        this.controllerFor('index').send('sortBy');
+    sortByName: function(){
+      this.controllerFor('index').send('sortBy');
+    },
+    sortByPaymentType: function() {
+        this.controllerFor('index').send('sortByPaymentType');
+     },
+    sortByTicketPrice: function() {
+        this.controllerFor('index').send('sortByTicketPrice');
+     },
+    sortByPaymentStatus: function() {
+        this.controllerFor('index').send('sortByPaymentStatus');
+     },
+    sortBysortByAttendance: function() {
+        this.controllerFor('index').send('sortBysortByAttendance');
      },
     destroyGuest(guest) {
       guest.destroyRecord();

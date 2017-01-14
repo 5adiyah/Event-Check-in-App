@@ -16,10 +16,10 @@
   <table class="tickets">
     <tr class="line">
       <th class="col headerTrash">Del/Edit</th>
-      <th class="col headerName">Full Name</th>
-      <th {{action 'sortBy' target=appCont}} class="col headerPayment">Payment Type</th>
-      <th class="col headerStatus">Payment Status</th>
-      <th class="col headerAttendance">Attendance</th>
+      <th {{action 'sortByName'}} class="col headerName">Full Name</th>
+      <th {{action 'sortByPaymentType'}} value="hello" class="col headerPayment">Payment Type</th>
+      <th {{action 'sortByPaymentStatus'}} class="col headerStatus">Payment Status</th>
+      <th {{action 'sortBysortByAttendance'}} class="col headerAttendance">Attendance</th>
       <th class="col headerSelect1">Payment Status</th>
       <th class="col headerSelect2">Attendance Status</th>
     </tr>
