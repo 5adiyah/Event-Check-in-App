@@ -30,6 +30,9 @@ export default Ember.Route.extend({
       guest.save();
       this.transitionTo('index');
     },
+    sortBy: function() {
+        this.controllerFor('index').send('sortBy');
+     },
     destroyGuest(guest) {
       guest.destroyRecord();
       this.transitionTo('index');
