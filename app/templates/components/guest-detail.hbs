@@ -1,0 +1,19 @@
+<div class="topBar">
+  {{#link-to 'index'}}<h2>DAUGHTERS OF EVE | SUCCESS & SISTERHOOD</h2>{{/link-to}}
+</div>
+
+<div class="header">
+  <h3>Attendees</h3>
+  <span class="filter active">Guest Details</span>
+  {{#link-to 'index'}}<span class="filter">Back Home</span>{{/link-to}}
+</div>
+
+<div class="main">
+  <div class="guestDetails">
+    <p><span class="blackBold">Name:</span> {{guest.name}}</p>
+    <p><span class="blackBold">Ticket Price:</span> ${{guest.ticketPrice}}.00</p>
+    <p><span class="blackBold">Payment Type:</span> {{guest.paymentType}}</p>
+    <p><span class="blackBold">Payment Status:</span> {{guest.paymentStatus}}</p>
+    <p><span class="blackBold">Attendance Status:</span> {{guest.attendanceStatus}}</p>
+  </div>
+</div>

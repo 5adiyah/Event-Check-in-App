@@ -7,6 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('guest', {path: '/guest/:guest_id'});
+  this.route('online-payments');
+  this.route('cash-payments');
+  this.route('no-payments');
 });
 
 export default Router;

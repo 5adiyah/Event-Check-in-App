@@ -1,0 +1,30 @@
+<tr class="items guestTileItems">
+  <td class="col trashCol"><p>&nbsp;&nbsp;<img {{action 'delete' guest}} src="https://maxcdn.icons8.com/windows8/PNG/26/Industry/trash-26.png" title="Trash" width="20"></p></td>
+  {{#link-to 'guest' guest.id}}<td class="col nameCol">{{guest.name}}</td>{{/link-to}}
+  <td class="col emailCol">{{guest.paymentType}}</td>
+  <td class="col emailCol">{{guest.paymentStatus}}</td>
+  <td class="col payCol">{{guest.attendanceStatus}}</td>
+  <td class="select1Col">
+    <select class="select" onchange={{action "getPayment" value="target.value"}}>
+     <option disabled selected>Edit Payment Status</option>
+     <option value="Paid">Paid</option>
+     <option value="No payment">No Payment</option>
+     <option value="Partial Payment">Partial Payment</option>
+     <option value="No Payment">Unresolved</option>
+    </select>
+    <img {{action 'update' guest}} class="downSave" src="https://maxcdn.icons8.com/Color/PNG/24/Network/cloud_checked-24.png" title="Cloud Checked" width="30">
+  </td>
+  <td class="select2Col">
+    <select class="select" onchange={{action "getAttendance" value="target.value"}}>
+     <option disabled selected>Edit Attendance Status</option>
+     <option value="NA">NA</option>
+     <option value="Present">Present</option>
+     <option value="No Show">No Show</option>
+    </select>
+    <img {{action 'update' guest}} class="downSave" src="https://maxcdn.icons8.com/Color/PNG/24/Network/cloud_checked-24.png" title="Cloud Checked" width="30">
+  </td>
+</tr>
+
+
+<!-- {{update-guest guest=guest update="update"}}
+<button>Delete Guest</button> -->

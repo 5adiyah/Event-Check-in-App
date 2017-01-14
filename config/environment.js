@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'registration-app',
     environment: environment,
-    rootURL: '/',
+    rootURL: '',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -15,6 +15,13 @@ module.exports = function(environment) {
         // Prevent Ember Data from overriding Date.parse.
         Date: false
       }
+    },
+
+    firebase: {
+     apiKey: "AIzaSyBiyw51QcscMXImFg8M1CmhkmrfAkBmVP4",
+     authDomain: "registration-a39f0.firebaseapp.com",
+     databaseURL: "https://registration-a39f0.firebaseio.com",
+     storageBucket: "registration-a39f0.appspot.com",
     },
 
     APP: {

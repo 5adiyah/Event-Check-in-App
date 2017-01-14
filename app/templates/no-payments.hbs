@@ -1,0 +1,34 @@
+<div class="topBar">
+  {{#link-to 'index'}}<h2>DAUGHTERS OF EVE | SUCCESS & SISTERHOOD</h2>{{/link-to}}
+</div>
+
+<div class="header">
+  <h3>Attendees</h3>
+  {{#link-to 'index'}}<span class="filter">View All</span>{{/link-to}}
+  {{#link-to 'online-payments'}}<span class="filter">Online Payments</span>{{/link-to}}
+  {{#link-to 'cash-payments'}}<span class="filter">Cash Payments</span>{{/link-to}}
+  <span class="filter active">No Payments</span>
+  <span class="filter total">{{model.length}} Entries</span>
+</div>
+
+<div class="main">
+
+  <table class="tickets">
+    <tr class="line">
+      <th class="col headerTrash">Del/Edit</th>
+      <th class="col headerName">Full Name</th>
+      <th class="col headerPayment">Payment Type</th>
+      <th class="col headerStatus">Payment Status</th>
+      <th class="col headerAttendance">Attendance</th>
+      <th class="col headerSelect1">Payment Status</th>
+      <th class="col headerSelect2">Attendance Status</th>
+    </tr>
+  </table>
+
+  <table class="tickets tickets2">
+    {{#each sortedGuests as |guest|}}
+    {{guest-tile guest=guest update="update" destroyGuest="destroyGuest"}}
+    {{/each}}
+  </table>
+  {{new-guest saveGuest2="saveGuest3"}}
+</div>

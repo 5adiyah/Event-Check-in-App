@@ -1,0 +1,35 @@
+{{#if addNewGuest}}
+<div class="newFormSec">
+  <h3>New Guest</h3>
+
+  <form class="newGuestForm">
+    <div class="form-group">
+      <label class="formLabel" for="name">Guest Full Name</label>
+      {{input value=name id="name"}}
+    </div>
+
+    <div class="form-group">
+      <label class="formLabel" for="paymentType">Payment Type</label>
+      {{input value=paymentType id="paymentType"}}
+    </div>
+
+    <div class="form-group">
+      <label class="formLabel" for="ticketPrice">Payment Price</label>
+      {{input value=ticketPrice id="ticketPrice"}}
+    </div>
+
+    <div class="form-group">
+      <label class="formLabel" for="paymentStatus">Payment Status</label>
+      {{input value=paymentStatus id="paymentStatus"}}
+    </div>
+    <div class="form-group">
+      <label class="formLabel" for="attendanceStatus">Attendance Status</label>
+      {{input value=attendanceStatus id="attendanceStatus"}}
+    </div>
+
+    <button {{action 'saveGuest1'}}>Save</button>
+  </form>
+</div>
+{{else}}
+  <button {{action 'guestFormShow'}}>New Guest</button>
+{{/if}}
