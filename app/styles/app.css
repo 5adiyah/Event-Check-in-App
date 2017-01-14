@@ -258,3 +258,7 @@ a{
 a:hover{
   color: #1F9EA3;
 }
+
+.main .tickets th{
+  cursor: pointer;
+}
